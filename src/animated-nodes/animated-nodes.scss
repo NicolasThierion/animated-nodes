@@ -1,0 +1,36 @@
+@import '../../styles/colors';
+
+$primary-gradient: lighten(transparentize($primary, $amount: 0.5), 0);
+$secondary-gradient: lighten(transparentize($primary, $amount: 0.2), 0);
+
+$primary-node: transparentize($third, 0.5);
+$secondary-node: transparentize($secondary, 0.5);
+$text-node: #ffffff88;
+
+:host {
+}
+
+.background {
+  background-color: $purple-500;
+}
+.gradient-1 {
+  background-color: $primary-gradient;
+}
+
+.gradient-2 {
+  background-color: $secondary-gradient;
+}
+
+.nodes {
+  .node-background:nth-of-type(2n) {
+    background-color: $primary-node;
+  }
+
+  .node-background:nth-of-type(2n + 1) {
+    background-color: $secondary-node;
+  }
+
+  .node-text {
+    background-color: $text-node;
+  }
+}
